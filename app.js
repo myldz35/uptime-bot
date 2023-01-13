@@ -1,6 +1,6 @@
+const { Client } = require('discord.js');
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v10");
-const { Client, Collection, VoiceState } = require('discord.js');
 const client = new Client({ intents: 647 });
 const { token } = require("./config.json");
 const db = require("mongoose");
@@ -92,7 +92,7 @@ client.on('ready', () => {
                 } catch { console.log(`hatalı link: [${b.link} + ${b.sahip}]`); }
             })
         })
-    }, 5000)
+    }, 10000)
 })
 
 
